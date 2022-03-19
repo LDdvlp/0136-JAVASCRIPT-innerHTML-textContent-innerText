@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-.innerHTML-.textContent-.innerTextt</title>
+</head>
+
+<body>
+
+    <h1 id="main_title">JavaScript .innerHTML, .textContent et .innerText</h1>
+
+    <hr/>
+
+    <h2>Le DOM</h2>
+
+    <h3>Le paragraphe #1 :</h3>
+    <p class="paragraph1"> du texte et <a href="http://david.com">un lien hypertexte</a></p>
+    <h3>Le paragraphe #2 :</h3>
+    <p class="paragraph2">du texte et pas de lien hypertexte</a></p>
+    
+    <hr/>
+    
+    <h2>Les 6 sorties (affichages)</h2>
+
+    <h3>Le paragraphe #1 en .innerHTML :</h3>
+    <p id="p1"></p>
+
+    <h3>Le paragraphe #1 en .textContent :</h3>
+    <p id="p2"></p>
+
+    <h3>Le paragraphe #1 en .innerText :</h3>
+    <p id="p3"></p>
+
+    <h3>Le paragraphe #2 en .innerHTML :</h3>
+    <p id="p4"></p>
+
+    <h3>Le paragraphe #2 en .textContent :</h3>
+    <p id="p5"></p>
+
+    <h3>Le paragraphe #2 en .innerText :</h3>
+    <p id="p6"></p>
+
+    <h2>Les 6 sorties en document.write</h2>
+    
+
+
+<script>
+    
+    //BODY
+    var ih1 = document.querySelector('.paragraph1').innerHTML;
+    document.getElementById("p1").innerHTML=ih1;
+    
+    var tc1 = document.querySelector('.paragraph1').textContent;
+    document.getElementById("p2").innerHTML=tc1;
+
+    var it1 = document.querySelector('.paragraph1').innerHTML;
+    document.getElementById("p3").innerText=it1;
+
+    var ih2 = document.querySelector('.paragraph2').innerHTML;
+    document.getElementById("p4").innerHTML=ih2;
+   
+    var tc2 = document.querySelector('.paragraph2').textContent;
+    document.getElementById("p5").innerHTML=ih2;
+
+    var it2 = document.querySelector('.paragraph2').innerHTML;
+    document.getElementById("p6").innerText=it2;
+
+    //DOCUMENT
+    document.write(ih1);
+    document.write("<br><br>");
+
+    document.write(tc1);
+    document.write("<br><br>");
+    
+    document.write(it1);
+    document.write("<br><br>");
+    
+    document.write(ih2);
+    document.write("<br><br>");
+    
+    document.write(tc2);
+    document.write("<br><br>");
+
+    document.write(it2);
+    document.write("<br><br>");
+    
+    //CONSOLE
+    console.log(ih1);
+    console.log(tc1);
+    console.log(it1);
+    console.log(ih2);
+    console.log(tc2);
+    console.log(it2);
+
+</script>    
+    
+</body>
+</html>
